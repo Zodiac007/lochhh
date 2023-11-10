@@ -29,9 +29,15 @@ export default function Testimonials() {
         <div className="col-span-1 flex items-end">
           <img src={Logo} alt="logo" />
         </div>
-        <TestimonialCard />
-        <TestimonialCard />
-        {/* <div className="col-span-2">test2</div> */}
+        {TestimonialContent.map((t) => (
+          <>
+            <TestimonialCard
+              username={t.username}
+              designation={t.designation}
+              quote={t.quote}
+            />
+          </>
+        ))}
       </div>
     </div>
   );
